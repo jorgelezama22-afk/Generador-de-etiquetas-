@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Etiquetas de Precios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Etiquetas de Precios</h1>
+    <form id="priceForm">
+      <label for="product">Producto:</label>
+      <input type="text" id="product" name="product" required>
+      <label for="weight">Peso (kg):</label>
+      <input type="number" step="any" id="weight" name="weight" required>
+      <label for="price">Precio por kg ($):</label>
+      <input type="number" step="any" id="price" name="price" required>
+      <button type="submit">Generar etiqueta</button>
+    </form>
+    <div id="labelArea" class="label-area" style="display:none;">
+      <div class="price-label" id="priceLabel"></div>
+      <button onclick="window.print()">Imprimir etiqueta</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
